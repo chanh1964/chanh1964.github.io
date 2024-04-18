@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#chanh-header {
+  @apply block lg:hidden;
+}
+
+#chanh-sider {
+  @apply hidden lg:flex lg:justify-center
+  !w-96 !max-w-96 !basis-auto p-8
+  text-chanh-secondary;
+}
+
+html,
+body,
+.chanh-layout-wrapper {
+  height: 100vh;
+  @apply !bg-chanh-secondary !font-sans text-base;
+}
+
+#chanh-content-wrapper {
+  @apply p-8;
+}
+
+p,
+span,
+a {
+  @apply !font-normal text-base;
+}
+
+h1,
+h2 {
+  @apply !font-bold !font-serif;
+}
+
+h1 {
+  @apply !text-2xl;
+}
+
+h2 {
+  @apply !text-xl;
+}
+
+.chanh-nav {
+  @apply h-[100vh] !bg-chanh-emphasize;
+}
+
+.avatar-and-social {
+  @apply text-center;
+}
+
+.avatar-and-social__avatar {
+  @apply border-chanh-secondary border-8 rounded-full;
+}
+
+.avatar-and-social__name {
+  @apply !text-2xl;
+}
+
+.avatar-and-social__social {
+  @apply flex justify-center gap-2;
+}
+
+.avatar-and-social__social__icon {
+  @apply cursor-pointer text-4xl 
+  border border-chanh-secondary 
+  bg-chanh-secondary hover:bg-chanh-emphasize-200 
+  text-chanh-emphasize hover:text-chanh-emphasize-700;
+}
