@@ -14,6 +14,7 @@ type Props = {
 export default function ChanhSocialButton(props: Props) {
   return (
     <Tooltip
+      className="social-icon--wrapper"
       title={props.tooltipText}
       color={props.tooltipBgColor ?? '#fefeff'}
       overlayInnerStyle={{

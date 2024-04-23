@@ -1,21 +1,25 @@
 'use client';
 
 import { Image, Space, message } from 'antd';
-import LinkedIn from './icons/socials/LinkedIn';
-import GoogleScholar from './icons/socials/GoogleScholar';
-import ResearchGate from './icons/socials/ResearchGate';
-import Email from './icons/socials/Email';
-import ChanhSocialButton from './icons/socials/ChanhSocialButton';
+import LinkedIn from '../icons/socials/LinkedIn';
+import GoogleScholar from '../icons/socials/GoogleScholar';
+import ResearchGate from '../icons/socials/ResearchGate';
+import Email from '../icons/socials/Email';
+import ChanhSocialButton from '../icons/socials/ChanhSocialButton';
 import { useState } from 'react';
 
-export function AvatarAndSocial() {
+type Props = {
+  className?: string;
+};
+
+export function AvatarAndSocial(props: Props) {
   const [copyText, setCopyText] = useState<string>('Click to Copy');
 
   return (
     <Space className="avatar-and-social" direction="vertical" size="middle">
       <Image
         preview={false}
-        className="avatar-and-social__avatar"
+        className={`avatar-and-social__avatar ${props.className}`}
         src="/avatar.jpg"
         alt="Avatar"
       />

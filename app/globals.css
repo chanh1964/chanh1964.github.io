@@ -46,6 +46,17 @@ h2 {
   @apply h-[100vh] !bg-chanh-emphasize;
 }
 
+.chanh-nav__links-wrapper {
+  @apply py-8;
+}
+
+.chanh-nav__links {
+  text-decoration: none;
+  @apply block py-2 px-3 rounded-2xl
+  hover:bg-chanh-emphasize-400 focus:bg-chanh-emphasize-400
+  text-3xl text-right text-chanh-secondary hover:text-chanh-secondary focus:text-chanh-secondary;
+}
+
 .avatar-and-social {
   @apply text-center;
 }
@@ -65,6 +76,14 @@ h2 {
 .avatar-and-social__social__icon {
   @apply cursor-pointer text-4xl 
   border border-chanh-secondary 
-  bg-chanh-secondary hover:bg-chanh-emphasize-200 
+  bg-chanh-secondary hover:bg-chanh-emphasize-200
   text-chanh-emphasize hover:text-chanh-emphasize-700;
+}
+
+.social-icon--wrapper:focus {
+  @apply !outline-chanh-emphasize-300 !outline-2 h-full;
+}
+
+.social-icon--wrapper:focus .avatar-and-social__social__icon {
+  @apply bg-chanh-emphasize-200 text-chanh-emphasize-700;
 }
