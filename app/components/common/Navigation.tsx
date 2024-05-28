@@ -7,6 +7,14 @@ export default function Navigation() {
       label: 'News & Updates',
     },
     {
+      href: '/profile',
+      label: 'Profile',
+    },
+    {
+      href: '/activities',
+      label: 'Activities',
+    },
+    {
       href: '/publications',
       label: 'Publications',
     },

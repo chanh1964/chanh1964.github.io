@@ -20,13 +20,33 @@ body,
 }
 
 #chanh-content-wrapper {
-  @apply p-8;
+  @apply p-8 overflow-y-auto;
+}
+
+table,
+tbody,
+tr,
+td {
+  @apply block;
+}
+
+table {
+  @apply bg-chanh-secondary;
+}
+
+.ant-collapse-content-box,
+.ant-table-cell {
+  @apply !px-0 bg-inherit;
+}
+
+.ant-collapse-header {
+  @apply !items-center;
 }
 
 p,
 span,
 a {
-  @apply !font-normal text-base;
+  @apply !font-normal text-base text-chanh-primary;
 }
 
 h1,
@@ -54,7 +74,7 @@ h2 {
   text-decoration: none;
   @apply block py-2 px-3 rounded-2xl
   hover:bg-chanh-emphasize-400 focus:bg-chanh-emphasize-400
-  text-3xl text-right text-chanh-secondary hover:text-chanh-secondary focus:text-chanh-secondary;
+  text-3xl text-center text-chanh-secondary hover:text-chanh-secondary focus:text-chanh-secondary;
 }
 
 .avatar-and-social {
@@ -86,4 +106,8 @@ h2 {
 
 .social-icon--wrapper:focus .avatar-and-social__social__icon {
   @apply bg-chanh-emphasize-200 text-chanh-emphasize-700;
+}
+
+.publications-table thead {
+  @apply hidden;
 }
