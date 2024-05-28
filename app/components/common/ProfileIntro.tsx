@@ -1,6 +1,6 @@
 'use client';
 
-import { Image, Space, message } from 'antd';
+import { Image, Space } from 'antd';
 import LinkedIn from '../icons/socials/LinkedIn';
 import GoogleScholar from '../icons/socials/GoogleScholar';
 import ResearchGate from '../icons/socials/ResearchGate';
@@ -57,10 +57,6 @@ export function AvatarAndSocial(props: Props) {
           onClick={() => {
             navigator.clipboard.writeText('tran.chanh.r4[at]shibaura-it.ac.jp');
             setCopyText('Copied to Clipboard');
-            message.open({
-              type: 'success',
-              content: 'Copied to Clipboard',
-            });
             setTimeout(() => setCopyText('Click to Copy'), 2000);
           }}
         />

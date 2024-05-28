@@ -19,8 +19,12 @@ body,
   @apply !bg-chanh-secondary !font-sans text-base;
 }
 
+#chanh-content-wrapper__outer {
+  @apply h-full overflow-y-auto lg:flex lg:items-center;
+}
+
 #chanh-content-wrapper {
-  @apply p-8 overflow-y-auto;
+  @apply p-8 max-w-[1080px] w-full;
 }
 
 table,
@@ -35,23 +39,28 @@ table {
 }
 
 .ant-collapse-content-box,
+.ant-collapse,
 .ant-table-cell {
-  @apply !px-0 bg-inherit;
+  @apply !px-0 !bg-chanh-secondary;
 }
 
 .ant-collapse-header {
   @apply !items-center;
 }
 
+.ant-divider {
+  @apply !border-chanh-emphasize;
+}
+
 p,
 span,
 a {
-  @apply !font-normal text-base text-chanh-primary;
+  @apply !font-normal text-lg text-chanh-primary;
 }
 
 h1,
 h2 {
-  @apply !font-bold !font-serif;
+  @apply !font-bold !font-serif text-chanh-emphasize;
 }
 
 h1 {
@@ -86,7 +95,7 @@ h2 {
 }
 
 .avatar-and-social__name {
-  @apply !text-2xl;
+  @apply !text-2xl text-chanh-secondary;
 }
 
 .avatar-and-social__social {
@@ -110,4 +119,12 @@ h2 {
 
 .publications-table thead {
   @apply hidden;
+}
+
+.publications-table tr {
+  @apply bg-chanh-secondary;
+}
+
+.publications-table td {
+  @apply hover:!bg-chanh-emphasize-50;
 }

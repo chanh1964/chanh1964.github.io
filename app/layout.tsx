@@ -36,12 +36,15 @@ export default function RootLayout({
             <Header id="chanh-header" className="chanh-nav">
               The Header
             </Header>
-            <Layout hasSider className="chanh-layout-wrapper">
+            <Layout hasSider className="chanh-layout-wrapper overflow-hidden">
               <Sider id="chanh-sider" className="chanh-nav">
                 <AvatarAndSocial />
                 <Navigation />
               </Sider>
-              <Layout className="chanh-layout-wrapper">
+              <Layout
+                className="chanh-layout-wrapper"
+                id="chanh-content-wrapper__outer"
+              >
                 <Content id="chanh-content-wrapper">{children}</Content>
               </Layout>
             </Layout>

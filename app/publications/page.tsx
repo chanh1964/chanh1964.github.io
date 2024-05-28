@@ -29,7 +29,7 @@ export default function PublicationsPage() {
           <span>
             {`${record.authors}, ${Math.trunc(record.date / 10000)}`},{' '}
             <em>
-              <b>{record.title}</b>
+              <strong>{record.title}</strong>
             </em>
             , {record.properties}.{' '}
             {record.link ? (
@@ -48,7 +48,11 @@ export default function PublicationsPage() {
   const items: CollapseProps['items'] = [
     {
       key: '1',
-      label: <h2>Journal Articles (Peer-Reviewed)</h2>,
+      label: (
+        <h2 className="text-chanh-emphasize">
+          Journal Articles (Peer-Reviewed)
+        </h2>
+      ),
       style: { border: 'none' },
       children: (
         <Table
