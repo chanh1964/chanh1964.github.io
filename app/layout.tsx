@@ -45,7 +45,11 @@ export default function RootLayout({
                 className="chanh-layout-wrapper"
                 id="chanh-content-wrapper__outer"
               >
-                <Content id="chanh-content-wrapper">{children}</Content>
+                <Content id="chanh-content-wrapper">
+                  {children}
+                  <br />
+                  <br />
+                </Content>
               </Layout>
             </Layout>
           </Layout>

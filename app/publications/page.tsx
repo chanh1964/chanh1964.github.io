@@ -2,18 +2,17 @@
 
 import { useEffect, useState } from 'react';
 import Publications from '../types/Publications';
-import { Table, Collapse, CollapseProps } from 'antd';
+import { Table, Collapse, CollapseProps, Skeleton } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import PublicationInfo from '../types/PublicationInfo';
+import DataSource from '../DataSource';
 
 export default function PublicationsPage() {
   const [data, setData] = useState<Publications>();
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      'https://gist.githubusercontent.com/chanh1964/f92b73b8df77b99ae107dc177a5b789c/raw'
-    )
+    fetch(DataSource.PUBLICATIONS)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -33,7 +32,7 @@ export default function PublicationsPage() {
             </em>
             , {record.properties}.{' '}
             {record.link ? (
-              <a href={record.link} target="_blank">
+              <a href={record.link} target="_blank" className="chanh-link">
                 {record.link}
               </a>
             ) : (
@@ -56,7 +55,7 @@ export default function PublicationsPage() {
       style: { border: 'none' },
       children: (
         <Table
-          className="publications-table"
+          className="chanh-table publications-table"
           dataSource={data?.journal}
           columns={columns}
           loading={isLoading}
@@ -73,7 +72,7 @@ export default function PublicationsPage() {
       style: { border: 'none' },
       children: (
         <Table
-          className="publications-table"
+          className="chanh-table publications-table"
           dataSource={data?.conference}
           columns={columns}
           loading={isLoading}
@@ -90,7 +89,7 @@ export default function PublicationsPage() {
       style: { border: 'none' },
       children: (
         <Table
-          className="publications-table"
+          className="chanh-table publications-table"
           dataSource={data?.conference_nonreview}
           columns={columns}
           loading={isLoading}
@@ -103,7 +102,9 @@ export default function PublicationsPage() {
     },
   ];
 
-  return (
+  return isLoading ? (
+    <Skeleton active />
+  ) : (
     <>
       <Collapse bordered={false} defaultActiveKey={['1']} items={items} />
     </>

@@ -1,12 +1,30 @@
-import { Divider } from 'antd';
+'use client';
+
+import { Divider, Skeleton } from 'antd';
+import { useEffect, useState } from 'react';
+import Update from './types/Update';
+import DataSource from './DataSource';
+import ChanhUpdatesTable from './components/ChanhUpdatesTable';
 
 export default function Home() {
+  const [data, setData] = useState<Update[]>();
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(DataSource.UPDATES)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <div id="about-me">
         <h1>About Me</h1>
         <Divider />
-        <span className="block text-justify hyphens-auto">
+        <span className="block">
           {/* A passionate researcher with concentration on multimedia technologies,
           quality of experience, and smart systems. A self-sufficient engineer
           who actively learns and adapts required frameworks for industrial
@@ -15,45 +33,65 @@ export default function Home() {
           guide junior students.
           <br />
           <br /> */}
-          <strong>Chanh Minh Tran</strong> (<strong>Dr. Chanh</strong>) received
-          his B.Eng. degree in Computer Science and Engineering from Ho Chi Minh
-          City University of Technology (HCMUT), Vietnam in 2018. After that, he
-          pursued his M.Eng. degree in Electrical Engineering and Computer
-          Science, and Ph.D. degree in Functional Control Systems at Shibaura
-          Institute of Technology (SIT), Japan from 2018 to 2023, under the
-          sponsorship of JICA Innovative Asia program (M.Eng.), SIT Scholarship
-          for Foreign Graduate Students (Ph.D., 1st year), and MEXT Scholarship
-          (Ph.D., 2nd & 3rd year).
+          Hello! I am <strong>Chanh Minh Tran</strong> (
+          <strong>Dr. Chanh</strong>). I am from Ho Chi Minh City, Vietnam{' '}
+          <img
+            className="inline-block align-top w-7"
+            src="https://img.icons8.com/color/48/vietnam.png"
+            alt="vietnam"
+          />
+          <br />
+          <br />I received my B.Eng. degree in Computer Science and Engineering
+          from Ho Chi Minh City University of Technology (HCMUT), Vietnam in
+          2018. After that, I pursued the M.Eng. degree in Electrical
+          Engineering and Computer Science, and Ph.D. degree in Functional
+          Control Systems at
+          <em className="not-italic">Shibaura Institute of Technology</em>{' '}
+          (SIT), Japan from 2018 to 2023, under the sponsorship of{' '}
+          <em className="not-italic">JICA Innovative Asia</em> program (M.Eng.),
+          SIT Scholarship for Foreign Graduate Students (Ph.D., 1st year), and{' '}
+          <em className="not-italic">MEXT</em> Scholarship (Ph.D., 2nd & 3rd
+          year).
           <br />
           <br />
-          His research interests includes Multimedia Technology, Computer
-          Networking, Internet of Things, Embedded Systems, and Accessible
-          Computing
+          My research interests are Multimedia Technology, Computer Networking,
+          Internet of Things, Embedded Systems, and Accessible Computing.
           <br />
           <br />
-          Currently, Dr. Chanh is a Postdoctoral Research Fellow in Innovative
-          Global Program, College of Engineering, SIT. He belongs to Mobile
-          Multimedia Communications Laboratory, where he has been appointed to a
-          research project about assistive technology for visually impaired
-          people.
+          Since 2023, I have been a{' '}
+          <em className="not-italic">Postdoctoral Research Fellow</em> in the
+          <em className="not-italic">Innovative Global Program</em> at{' '}
+          <em className="not-italic">College of Engineering</em>, SIT. I belong
+          to the Mobile Multimedia Communications Laboratory, where I have been
+          appointed to a research project on assistive technology for visually
+          impaired people.
           <br />
           <br />
-          Besides research duty, Dr. Chanh is in charge of the "Java Programming
+          Besides research duty, I am in charge of the "Java Programming
           Experiment" class (full responsibility) and the "Information &
           Communication Seminar" class (teaching assistant) for 3rd-year
-          undergraduate students. He jointly conducts research guidance for
-          4th-year undergraduate and master's students in the lab. He also
-          actively engages in organizing the international collaboration events
-          in the department.
+          undergraduate students. I jointly conduct research guidance for
+          4th-year undergraduate and master's students in the lab. I also
+          actively participate in the international collaboration events in the
+          department.
+          <br />
+          <br />I love playing with microcontrollers, microcomputers and
+          electronic devices. I have been a fan of the Arsenal F.C. since 2011.
+          I love travelling, photography, cooking, and Doraemon.
         </span>
       </div>
 
       <div id="news-short" className="pt-10">
         <h1>Latest News & Updates</h1>
         <Divider />
-        <span className="block text-justify hyphens-auto">
-          <a href="/updates">More...</a>
-        </span>
+        {isLoading ? (
+          <Skeleton active />
+        ) : (
+          <span className="block text-right">
+            <ChanhUpdatesTable data={data} />
+            <a href="/updates">More...</a>
+          </span>
+        )}
       </div>
     </>
   );

@@ -20,18 +20,12 @@ body,
 }
 
 #chanh-content-wrapper__outer {
+  scrollbar-gutter: stable;
   @apply h-full overflow-y-auto lg:flex lg:items-center;
 }
 
 #chanh-content-wrapper {
   @apply p-8 max-w-[1080px] w-full;
-}
-
-table,
-tbody,
-tr,
-td {
-  @apply block;
 }
 
 table {
@@ -69,6 +63,15 @@ h1 {
 
 h2 {
   @apply !text-xl;
+}
+
+::-webkit-scrollbar,
+scrollbar {
+  @apply bg-chanh-emphasize-200 w-1 lg:w-3.5;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-chanh-emphasize hover:bg-chanh-emphasize-700;
 }
 
 .chanh-nav {
@@ -117,14 +120,58 @@ h2 {
   @apply bg-chanh-emphasize-200 text-chanh-emphasize-700;
 }
 
-.publications-table thead {
+.chanh-table thead {
   @apply hidden;
 }
 
-.publications-table tr {
+.chanh-table .ant-table-cell {
+  @apply !p-2 lg:!p-4;
+}
+
+.chanh-table tr {
   @apply bg-chanh-secondary;
 }
 
+.chanh-table tr:hover td {
+  @apply !bg-chanh-emphasize-50;
+}
+
+.publications-table table,
+.publications-table tbody,
+.publications-table tr,
 .publications-table td {
-  @apply hover:!bg-chanh-emphasize-50;
+  @apply block;
+}
+
+.updates-table .ant-table-cell {
+  @apply first:!pl-0 last:!pr-0;
+}
+
+a.chanh-link {
+  @apply text-chanh-primary underline hover:text-chanh-emphasize-600 focus:text-chanh-emphasize-600;
+}
+
+.chanh-detail-modal {
+  @apply !max-w-[1080px] !w-[90%] lg:!w-full overflow-hidden;
+}
+
+.chanh-detail-modal .ant-modal-confirm-title {
+  @apply pr-7;
+}
+
+.chanh-detail-modal .ant-modal-confirm-paragraph {
+  @apply max-h-[80dvh];
+}
+
+.chanh-detail-modal .ant-modal-confirm-paragraph .ant-modal-confirm-content {
+  @apply overflow-y-auto pr-1.5 lg:pr-4;
+}
+
+.chanh-detail-modal__line,
+.chanh-detail-modal__thumbnail {
+  @apply block pb-4;
+}
+
+.chanh-detail-modal__thumbnail {
+  @apply block w-full;
 }
