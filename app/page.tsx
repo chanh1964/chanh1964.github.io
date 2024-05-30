@@ -1,6 +1,6 @@
 'use client';
 
-import { Divider, Skeleton } from 'antd';
+import { Divider, Image, Skeleton } from 'antd';
 import { useEffect, useState } from 'react';
 import Update from './types/Update';
 import DataSource from './DataSource';
@@ -35,8 +35,9 @@ export default function Home() {
           <br /> */}
           Hello! I am <strong>Chanh Minh Tran</strong> (
           <strong>Dr. Chanh</strong>). I am from Ho Chi Minh City, Vietnam{' '}
-          <img
-            className="inline-block align-top w-7"
+          <Image
+            preview={false}
+            className="inline-block !align-top !w-7"
             src="https://img.icons8.com/color/48/vietnam.png"
             alt="vietnam"
           />
@@ -67,13 +68,14 @@ export default function Home() {
           impaired people.
           <br />
           <br />
-          Besides research duty, I am in charge of the "Java Programming
-          Experiment" class (full responsibility) and the "Information &
-          Communication Seminar" class (teaching assistant) for 3rd-year
-          undergraduate students. I jointly conduct research guidance for
-          4th-year undergraduate and master's students in the lab. I also
-          actively participate in the international collaboration events in the
-          department.
+          Besides research duty, I am in charge of the{' '}
+          <em className="not-italic">Java Programming Experiment</em> class
+          (full responsibility) and the{' '}
+          <em className="not-italic">Information & Communication Seminar</em>
+          class (teaching assistant) for 3rd-year undergraduate students. I
+          jointly conduct research guidance for 4th-year undergraduate and
+          master&lsquo;s students in the lab. I also actively participate in the
+          international collaboration events in the department.
           <br />
           <br />I love playing with microcontrollers, microcomputers and
           electronic devices. I have been a fan of the Arsenal F.C. since 2011.
