@@ -11,7 +11,7 @@ export default function Home() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(DataSource.UPDATES)
+    fetch(DataSource.UPDATES_LATEST)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -91,7 +91,9 @@ export default function Home() {
         ) : (
           <span className="block text-right">
             <ChanhUpdatesTable data={data} />
-            <a href="/updates">More...</a>
+            <a className="chanh-link" href="/updates">
+              More...
+            </a>
           </span>
         )}
       </div>

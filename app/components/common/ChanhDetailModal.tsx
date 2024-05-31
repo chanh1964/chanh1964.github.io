@@ -1,12 +1,17 @@
 'use client';
-import { Col, Modal, Row, Image } from 'antd';
+import { Col, Modal, Row, Image, message } from 'antd';
 import Update from '../../types/Update';
+import { useEffect } from 'react';
+import { LinkOutlined } from '@ant-design/icons';
 
 type Props = {
   data: Update;
 };
 
 const ChanhDetailModal = (props: Props) => {
+  useEffect(() => {
+    document.getElementById(window.location.href.split('#')[1])?.click();
+  });
   const generateDetail = () => {
     if (!props.data.detail) return null;
     else {
@@ -14,6 +19,23 @@ const ChanhDetailModal = (props: Props) => {
       for (const line of props.data.detail) {
         span_detail.push(
           <span className="chanh-detail-modal__line !px-0">{line}</span>
+        );
+      }
+      if (props.data.links) {
+        const links = [];
+        for (const link of props.data.links) {
+          links.push(
+            <a className="chanh-link block" href={link} target="_blank">
+              {link}
+            </a>
+          );
+        }
+        span_detail.push(
+          <span>
+            <b>Related link(s)</b>:
+            <br />
+            {links}
+          </span>
         );
       }
       return span_detail;
@@ -49,7 +71,23 @@ const ChanhDetailModal = (props: Props) => {
       footer: [],
       content: (
         <>
-          <i>{`${_date.slice(0, 4)}.${_date.slice(4, 6)}.${_date.slice(6)}`}</i>
+          {/* <span> */}
+          <i>
+            {`${_date.slice(0, 4)}.${_date.slice(4, 6)}.${_date.slice(6)}`}
+            <a
+              className="chanh-link text-base"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  `${window.location.host}/updates/#${props.data.id}`
+                );
+                message.success('Copied link to clipboard!');
+              }}
+            >
+              <LinkOutlined className="pl-4 pr-0.5 text-base" />
+              Shareable Link
+            </a>
+          </i>
+          {/* </span> */}
           {props.data.thumbnail_link
             ? generateDetailWithThumbnail()
             : generateDetail()}
@@ -57,12 +95,20 @@ const ChanhDetailModal = (props: Props) => {
       ),
       title: <h2>{props.data.title}</h2>,
       className: 'chanh-detail-modal',
+      onCancel: () => {
+        Modal.destroyAll();
+        window.history.replaceState({}, '', window.location.href.split('#')[0]);
+      },
     });
   };
 
   return (
-    <a className="chanh-link" onClick={() => showDetail()}>
-      {props.data?.title}
+    <a
+      className="chanh-link"
+      onClick={() => showDetail()}
+      id={`${props.data.id}`}
+    >
+      {props.data.title}
     </a>
   );
 };

@@ -15,7 +15,7 @@
 html,
 body,
 .chanh-layout-wrapper {
-  height: 100vh;
+  height: 100dvh;
   @apply !bg-chanh-secondary !font-sans text-base;
 }
 
