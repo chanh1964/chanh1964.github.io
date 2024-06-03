@@ -2,9 +2,10 @@
 
 import { Divider, Image, Skeleton } from 'antd';
 import { useEffect, useState } from 'react';
-import { Update } from './types';
-import DataSource from './DataSource';
+
 import { ChanhUpdatesTable } from './components';
+import DataSource from './DataSource';
+import { Update } from './types';
 
 export default function Home() {
   const [data, setData] = useState<Update[]>();

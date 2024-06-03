@@ -1,10 +1,13 @@
+import './globals.css';
+
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { Layout } from 'antd';
+import { Content, Header } from 'antd/lib/layout/layout';
+import Sider from 'antd/lib/layout/Sider';
 import type { Metadata } from 'next';
 import { Lato, Lora } from 'next/font/google';
-import './globals.css';
-import { Layout } from 'antd';
-import { Header, Content } from 'antd/lib/layout/layout';
-import Sider from 'antd/lib/layout/Sider';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
+import React, { ReactNode } from 'react';
+
 import { AvatarAndSocial, Navigation } from './components';
 
 const sans = Lato({
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>

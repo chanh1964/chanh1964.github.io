@@ -1,9 +1,10 @@
 'use client';
 
 import { Image, Space } from 'antd';
-import { Email, GoogleScholar, LinkedIn, ResearchGate } from './icons/socials';
-import { ChanhSocialButton } from './';
 import { useState } from 'react';
+
+import { ChanhSocialButton } from './';
+import { Email, GoogleScholar, LinkedIn, ResearchGate } from './icons/socials';
 
 type Props = {
   className?: string;

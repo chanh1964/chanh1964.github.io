@@ -1,6 +1,7 @@
 import { Table } from 'antd';
-import Update from '../types/Update';
 import { ColumnsType } from 'antd/es/table';
+
+import Update from '../types/Update';
 import { ChanhDetailModal } from './';
 
 type Props = {

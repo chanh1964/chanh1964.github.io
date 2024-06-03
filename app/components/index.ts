@@ -6,10 +6,10 @@ import Navigation from './Navigation';
 import { AvatarAndSocial } from './ProfileIntro';
 
 export {
+  AvatarAndSocial,
   ChanhDetailModal,
   ChanhSocialButton,
   ChanhTooltip,
   ChanhUpdatesTable,
   Navigation,
-  AvatarAndSocial,
 };

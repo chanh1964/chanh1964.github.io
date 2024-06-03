@@ -1,8 +1,9 @@
 'use client';
-import { Col, Modal, Row, Image, message } from 'antd';
-import { Update } from '../types';
-import { useEffect } from 'react';
 import { LinkOutlined } from '@ant-design/icons';
+import { Col, Image, message, Modal, Row } from 'antd';
+import { useEffect } from 'react';
+
+import { Update } from '../types';
 
 type Props = {
   data: Update;
