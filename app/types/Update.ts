@@ -1,9 +1,9 @@
 export default interface Update {
   id: string;
   date: number;
-  institution: string | null;
+  institution?: string;
   title: string;
-  detail: string[] | null;
-  links: string[] | null;
-  thumbnail_link: string | null;
+  detail?: string[];
+  links?: string[];
+  thumbnail_link?: string;
 }

@@ -1,7 +1,7 @@
 import { Table } from 'antd';
 import Update from '../types/Update';
 import { ColumnsType } from 'antd/es/table';
-import ChanhDetailModal from './common/ChanhDetailModal';
+import { ChanhDetailModal } from './';
 
 type Props = {
   data: Update[] | undefined;

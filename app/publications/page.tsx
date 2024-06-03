@@ -1,10 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Publications from '../types/Publications';
+import { PublicationInfo, Publications } from '../types';
 import { Table, Collapse, CollapseProps, Skeleton } from 'antd';
 import { ColumnsType } from 'antd/es/table';
-import PublicationInfo from '../types/PublicationInfo';
 import DataSource from '../DataSource';
 
 export default function PublicationsPage() {

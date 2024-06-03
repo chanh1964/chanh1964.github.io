@@ -1,11 +1,8 @@
 'use client';
 
 import { Image, Space } from 'antd';
-import LinkedIn from '../icons/socials/LinkedIn';
-import GoogleScholar from '../icons/socials/GoogleScholar';
-import ResearchGate from '../icons/socials/ResearchGate';
-import Email from '../icons/socials/Email';
-import ChanhSocialButton from '../icons/socials/ChanhSocialButton';
+import { Email, GoogleScholar, LinkedIn, ResearchGate } from './icons/socials';
+import { ChanhSocialButton } from './';
 import { useState } from 'react';
 
 type Props = {

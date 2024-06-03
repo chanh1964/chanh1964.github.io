@@ -2,9 +2,9 @@
 
 import { Divider, Image, Skeleton } from 'antd';
 import { useEffect, useState } from 'react';
-import Update from './types/Update';
+import { Update } from './types';
 import DataSource from './DataSource';
-import ChanhUpdatesTable from './components/ChanhUpdatesTable';
+import { ChanhUpdatesTable } from './components';
 
 export default function Home() {
   const [data, setData] = useState<Update[]>();
@@ -46,7 +46,7 @@ export default function Home() {
           from Ho Chi Minh City University of Technology (HCMUT), Vietnam in
           2018. After that, I pursued the M.Eng. degree in Electrical
           Engineering and Computer Science, and Ph.D. degree in Functional
-          Control Systems at
+          Control Systems at{' '}
           <em className="not-italic">Shibaura Institute of Technology</em>{' '}
           (SIT), Japan from 2018 to 2023, under the sponsorship of{' '}
           <em className="not-italic">JICA Innovative Asia</em> program (M.Eng.),
@@ -60,7 +60,7 @@ export default function Home() {
           <br />
           <br />
           Since 2023, I have been a{' '}
-          <em className="not-italic">Postdoctoral Research Fellow</em> in the
+          <em className="not-italic">Postdoctoral Research Fellow</em> in the{' '}
           <em className="not-italic">Innovative Global Program</em> at{' '}
           <em className="not-italic">College of Engineering</em>, SIT. I belong
           to the Mobile Multimedia Communications Laboratory, where I have been
@@ -70,9 +70,7 @@ export default function Home() {
           <br />
           Besides research duty, I am in charge of the{' '}
           <em className="not-italic">Java Programming Experiment</em> class
-          (full responsibility) and the{' '}
-          <em className="not-italic">Information & Communication Seminar</em>
-          class (teaching assistant) for 3rd-year undergraduate students. I
+          (since my doctoral course) for 3rd-year undergraduate students. I
           jointly conduct research guidance for 4th-year undergraduate and
           master&lsquo;s students in the lab. I also actively participate in the
           international collaboration events in the department.

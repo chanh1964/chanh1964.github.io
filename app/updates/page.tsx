@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ChanhUpdatesTable from '../components/ChanhUpdatesTable';
+import { ChanhUpdatesTable } from '../components';
 import DataSource from '../DataSource';
-import Update from '../types/Update';
+import { Update } from '../types';
 import { Skeleton } from 'antd';
 
 export default function UpdatesPage() {

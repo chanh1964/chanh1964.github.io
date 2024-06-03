@@ -3,5 +3,5 @@ export default interface PublicationInfo {
   authors: string;
   title: string;
   properties: string;
-  link: string | null;
+  link?: string;
 }

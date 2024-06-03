@@ -1,6 +1,6 @@
 'use client';
 import { Col, Modal, Row, Image, message } from 'antd';
-import Update from '../../types/Update';
+import { Update } from '../types';
 import { useEffect } from 'react';
 import { LinkOutlined } from '@ant-design/icons';
 
@@ -78,7 +78,7 @@ const ChanhDetailModal = (props: Props) => {
               className="chanh-link text-base"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `${window.location.host}/updates/#${props.data.id}`
+                  `${window.location.origin}/updates/#${props.data.id}`
                 );
                 message.success('Copied link to clipboard!');
               }}
@@ -96,7 +96,6 @@ const ChanhDetailModal = (props: Props) => {
       title: <h2>{props.data.title}</h2>,
       className: 'chanh-detail-modal',
       onCancel: () => {
-        Modal.destroyAll();
         window.history.replaceState({}, '', window.location.href.split('#')[0]);
       },
     });

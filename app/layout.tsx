@@ -5,8 +5,7 @@ import { Layout } from 'antd';
 import { Header, Content } from 'antd/lib/layout/layout';
 import Sider from 'antd/lib/layout/Sider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-import { AvatarAndSocial } from './components/common/ProfileIntro';
-import Navigation from './components/common/Navigation';
+import { AvatarAndSocial, Navigation } from './components';
 
 const sans = Lato({
   subsets: ['latin'],
