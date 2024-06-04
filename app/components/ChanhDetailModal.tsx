@@ -4,6 +4,7 @@ import { Col, Image, message, Modal, Row } from 'antd';
 import { useEffect } from 'react';
 
 import { Update } from '../types';
+import { dateToString } from '../util/Util';
 
 type Props = {
   data: Update;
@@ -62,7 +63,6 @@ const ChanhDetailModal = (props: Props) => {
   };
 
   const showDetail = () => {
-    const _date = props.data.date.toString();
     return Modal.info({
       centered: true,
       icon: ' ',
@@ -74,7 +74,7 @@ const ChanhDetailModal = (props: Props) => {
         <>
           {/* <span> */}
           <i>
-            {`${_date.slice(0, 4)}.${_date.slice(4, 6)}.${_date.slice(6)}`}
+            {dateToString(props.data.date)}
             <a
               className="chanh-link text-base"
               onClick={() => {
@@ -104,6 +104,7 @@ const ChanhDetailModal = (props: Props) => {
 
   return (
     <a
+      title="Click to read more detail"
       className="chanh-link"
       onClick={() => showDetail()}
       id={`${props.data.id}`}

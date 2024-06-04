@@ -2,6 +2,7 @@ import { Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 
 import Update from '../types/Update';
+import { dateToString } from '../util/Util';
 import { ChanhDetailModal } from './';
 
 type Props = {
@@ -11,15 +12,13 @@ type Props = {
 const ChanhUpdatesTable = (props: Props) => {
   const columns: ColumnsType<Update> = [
     {
+      width: 120,
       align: 'left',
       className: 'align-top',
       key: 'date',
       dataIndex: 'date',
       render: (text) => {
-        const _text = text.toString();
-        return (
-          <span className="align-top">{`${_text.slice(0, 4)}.${_text.slice(4, 6)}.${_text.slice(6)}`}</span>
-        );
+        return <span className="align-top">{dateToString(text)}</span>;
       },
     },
     {
@@ -34,6 +33,7 @@ const ChanhUpdatesTable = (props: Props) => {
 
   return (
     <Table
+      tableLayout="fixed"
       className="chanh-table updates-table"
       dataSource={props.data}
       columns={columns}

@@ -136,13 +136,6 @@ scrollbar {
   @apply !bg-chanh-emphasize-50;
 }
 
-.publications-table table,
-.publications-table tbody,
-.publications-table tr,
-.publications-table td {
-  @apply block;
-}
-
 .updates-table .ant-table-cell {
   @apply first:!pl-0 last:!pr-0;
 }
@@ -174,4 +167,17 @@ a.chanh-link {
 
 .chanh-detail-modal__thumbnail {
   @apply block w-full;
+}
+
+/* .activities-table__title {
+  @apply text-chanh-primary;
+} */
+.activities-table__category-wraper {
+  @apply pb-8;
+}
+.actitivies-table__detail {
+  @apply block;
+}
+.activities-table__entry-wraper {
+  @apply block;
 }

@@ -55,6 +55,7 @@ export default function PublicationsPage() {
       style: { border: 'none' },
       children: (
         <Table
+          tableLayout="fixed"
           className="chanh-table publications-table"
           dataSource={data?.journal}
           columns={columns}
@@ -72,6 +73,7 @@ export default function PublicationsPage() {
       style: { border: 'none' },
       children: (
         <Table
+          tableLayout="fixed"
           className="chanh-table publications-table"
           dataSource={data?.conference}
           columns={columns}
@@ -89,6 +91,7 @@ export default function PublicationsPage() {
       style: { border: 'none' },
       children: (
         <Table
+          tableLayout="fixed"
           className="chanh-table publications-table"
           dataSource={data?.conference_nonreview}
           columns={columns}
