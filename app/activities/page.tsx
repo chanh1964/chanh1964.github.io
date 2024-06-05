@@ -84,7 +84,7 @@ export default function ActivitiessPage() {
           record.to == -1
             ? null
             : record.to == 0
-              ? '- Present'
+              ? ' - Present'
               : ` - ${dateToString(record.to)}`;
         return (
           <span className="align-top">
@@ -133,19 +133,19 @@ export default function ActivitiessPage() {
   const items: CollapseProps['items'] = [
     {
       key: '1',
-      label: <h2 className="text-chanh-emphasize">Academic Activities</h2>,
+      label: <h1>Academic Activities</h1>,
       style: { border: 'none' },
       children: generateTables(data?.academic),
     },
     {
       key: '2',
-      label: <h2>International Activities</h2>,
+      label: <h1>International Activities</h1>,
       style: { border: 'none' },
       children: generateTables(data?.international),
     },
     {
       key: '3',
-      label: <h2>Volunteer and Community Outreach</h2>,
+      label: <h1>Volunteer and Community Outreach</h1>,
       style: { border: 'none' },
       children: (
         <Table

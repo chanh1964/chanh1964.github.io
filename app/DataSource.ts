@@ -14,6 +14,9 @@ const DataSource = {
   ACTIVITIES: isProd
     ? 'https://gist.githubusercontent.com/chanh1964/ecf7044cecdfe6df9c27221bcc991095/raw'
     : '/data/activities.json',
+  PROFILE: isProd
+    ? 'https://gist.githubusercontent.com/chanh1964/fa0a70360e8a71f38a961c125824735d/raw'
+    : '/data/profile.json',
 };
 
 export default DataSource;

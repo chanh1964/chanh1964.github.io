@@ -47,11 +47,7 @@ export default function PublicationsPage() {
   const items: CollapseProps['items'] = [
     {
       key: '1',
-      label: (
-        <h2 className="text-chanh-emphasize">
-          Journal Articles (Peer-Reviewed)
-        </h2>
-      ),
+      label: <h1>Journal Articles (Peer-Reviewed)</h1>,
       style: { border: 'none' },
       children: (
         <Table
@@ -69,7 +65,7 @@ export default function PublicationsPage() {
     },
     {
       key: '2',
-      label: <h2>Conference Papers (Peer-Reviewed)</h2>,
+      label: <h1>Conference Papers (Peer-Reviewed)</h1>,
       style: { border: 'none' },
       children: (
         <Table
@@ -87,7 +83,7 @@ export default function PublicationsPage() {
     },
     {
       key: '3',
-      label: <h2>Conference Papers (Non-Reviewed)</h2>,
+      label: <h1>Conference Papers (Non-Reviewed)</h1>,
       style: { border: 'none' },
       children: (
         <Table

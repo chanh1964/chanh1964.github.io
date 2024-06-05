@@ -94,7 +94,7 @@ scrollbar {
 }
 
 .avatar-and-social__avatar {
-  @apply border-chanh-secondary border-8 rounded-full;
+  @apply border-chanh-secondary border-8 rounded-full !w-44 xl:!w-full;
 }
 
 .avatar-and-social__name {
@@ -180,4 +180,25 @@ a.chanh-link {
 }
 .activities-table__entry-wraper {
   @apply block;
+}
+
+.chanh-timeline__item-wrapper span {
+  @apply block;
+}
+.chanh-timeline {
+  @apply !pt-4 !ml-1 !pb-2;
+}
+
+.chanh-timeline .ant-timeline-item-last {
+  @apply hidden;
+}
+.chanh-timeline .ant-timeline-item:nth-last-child(2) {
+  @apply pb-0 mb-5;
+}
+.chanh-timeline .ant-timeline-item:nth-last-child(2) .ant-timeline-item-tail {
+  inset-block-start: 0px;
+}
+
+.chanh-timeline .ant-timeline-item-tail {
+  @apply bg-chanh-emphasize-100;
 }
