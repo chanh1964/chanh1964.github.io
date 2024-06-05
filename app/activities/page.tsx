@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 'use client';
 
+import { LinkOutlined } from '@ant-design/icons';
 import { Collapse, CollapseProps, Skeleton, Timeline } from 'antd';
 import { useEffect, useState } from 'react';
 
@@ -31,7 +32,7 @@ export default function ActivitiessPage() {
           className="chanh-link"
           href={`${window.location.origin}/updates/#${record.interal_link_id}`}
         >
-          <b>{record.title}</b>
+          <b>{record.title}</b> <LinkOutlined className="chanh-anticon-link" />
         </a>
       );
     else

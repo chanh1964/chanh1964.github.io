@@ -1,5 +1,6 @@
 'use client';
 
+import { LinkOutlined } from '@ant-design/icons';
 import { Collapse, CollapseProps, Skeleton, Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { useEffect, useState } from 'react';
@@ -33,7 +34,7 @@ export default function PublicationsPage() {
             , {record.properties}.{' '}
             {record.link ? (
               <a href={record.link} target="_blank" className="chanh-link">
-                {record.link}
+                {record.link} <LinkOutlined className="chanh-anticon-link" />
               </a>
             ) : (
               '(Accepted for Publication)'

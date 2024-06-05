@@ -1,5 +1,6 @@
 'use client';
 
+import { LinkOutlined } from '@ant-design/icons';
 import { Skeleton, Timeline } from 'antd';
 import { useEffect, useState } from 'react';
 
@@ -29,7 +30,7 @@ export default function ProfilePage() {
           target="_blank"
           title="Click to open external link"
         >
-          {entry.place}
+          {entry.place} <LinkOutlined className="chanh-anticon-link" />
         </a>
       ) : (
         entry.place

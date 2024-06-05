@@ -5,7 +5,6 @@
 #chanh-header {
   @apply block lg:hidden;
 }
-
 #chanh-sider {
   @apply hidden lg:flex lg:justify-center
   !w-96 !max-w-96 !basis-auto p-8
@@ -23,7 +22,6 @@ body,
   scrollbar-gutter: stable;
   @apply h-full overflow-y-auto lg:flex lg:items-center;
 }
-
 #chanh-content-wrapper {
   @apply p-8 max-w-[1080px] w-full;
 }
@@ -37,7 +35,6 @@ table {
 .ant-table-cell {
   @apply !px-0 !bg-chanh-secondary;
 }
-
 .ant-collapse-header {
   @apply !items-center;
 }
@@ -69,7 +66,6 @@ h2 {
 scrollbar {
   @apply bg-chanh-emphasize-200 w-1 lg:w-3.5;
 }
-
 ::-webkit-scrollbar-thumb {
   @apply bg-chanh-emphasize hover:bg-chanh-emphasize-700;
 }
@@ -77,11 +73,9 @@ scrollbar {
 .chanh-nav {
   @apply h-[100vh] !bg-chanh-emphasize;
 }
-
 .chanh-nav__links-wrapper {
   @apply py-8;
 }
-
 .chanh-nav__links {
   text-decoration: none;
   @apply block py-2 px-3 rounded-2xl
@@ -92,19 +86,15 @@ scrollbar {
 .avatar-and-social {
   @apply text-center;
 }
-
 .avatar-and-social__avatar {
   @apply border-chanh-secondary border-8 rounded-full !w-44 xl:!w-full;
 }
-
 .avatar-and-social__name {
   @apply !text-2xl text-chanh-secondary;
 }
-
 .avatar-and-social__social {
   @apply flex justify-center gap-2;
 }
-
 .avatar-and-social__social__icon {
   @apply cursor-pointer text-4xl 
   border border-chanh-secondary 
@@ -115,7 +105,6 @@ scrollbar {
 .social-icon--wrapper:focus {
   @apply !outline-chanh-emphasize-300 !outline-2 h-full;
 }
-
 .social-icon--wrapper:focus .avatar-and-social__social__icon {
   @apply bg-chanh-emphasize-200 text-chanh-emphasize-700;
 }
@@ -123,19 +112,15 @@ scrollbar {
 .chanh-table thead {
   @apply hidden;
 }
-
 .chanh-table .ant-table-cell {
   @apply !p-2 lg:!p-4;
 }
-
 .chanh-table tr {
   @apply bg-chanh-secondary;
 }
-
 .chanh-table tr:hover td {
   @apply !bg-chanh-emphasize-50;
 }
-
 .updates-table .ant-table-cell {
   @apply first:!pl-0 last:!pr-0;
 }
@@ -143,28 +128,26 @@ scrollbar {
 a.chanh-link {
   @apply text-chanh-primary underline hover:text-chanh-emphasize-600 focus:text-chanh-emphasize-600;
 }
+a.chanh-link .chanh-anticon-link {
+  @apply !inline !align-top !text-base;
+}
 
 .chanh-detail-modal {
   @apply !max-w-[1080px] !w-[90%] lg:!w-full overflow-hidden;
 }
-
 .chanh-detail-modal .ant-modal-confirm-title {
   @apply pr-7;
 }
-
 .chanh-detail-modal .ant-modal-confirm-paragraph {
   @apply max-h-[80dvh];
 }
-
 .chanh-detail-modal .ant-modal-confirm-paragraph .ant-modal-confirm-content {
   @apply overflow-y-auto pr-1.5 lg:pr-4;
 }
-
 .chanh-detail-modal__line,
 .chanh-detail-modal__thumbnail {
   @apply block pb-4;
 }
-
 .chanh-detail-modal__thumbnail {
   @apply block w-full;
 }
@@ -175,7 +158,14 @@ a.chanh-link {
 .chanh-timeline {
   @apply !pt-4 !ml-1 !pb-2;
 }
-
+.chanh-timeline .ant-timeline-item-tail,
+.chanh-timeline .ant-timeline-item-head {
+  @apply relative z-10;
+}
+.chanh-timeline .ant-timeline-item-content {
+  @apply !ml-1 !pl-6
+  hover:bg-chanh-emphasize-50 focus:bg-chanh-emphasize-50;
+}
 .chanh-timeline .ant-timeline-item-last {
   @apply hidden;
 }
@@ -185,7 +175,6 @@ a.chanh-link {
 .chanh-timeline .ant-timeline-item:nth-last-child(2) .ant-timeline-item-tail {
   inset-block-start: 0px;
 }
-
 .chanh-timeline .ant-timeline-item-tail {
   @apply bg-chanh-emphasize-100;
 }

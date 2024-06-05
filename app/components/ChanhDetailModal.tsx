@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 import { Update } from '../types';
 import { dateToString } from '../util/Util';
+import ClickHere from './icons/ClickHere';
 
 type Props = {
   data: Update;
@@ -109,7 +110,7 @@ const ChanhDetailModal = (props: Props) => {
       onClick={() => showDetail()}
       id={`${props.data.id}`}
     >
-      {props.data.title}
+      <ClickHere className="inline" lean="right" /> {props.data.title}
     </a>
   );
 };
