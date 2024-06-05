@@ -74,23 +74,26 @@ scrollbar {
   @apply h-[100vh] !bg-chanh-emphasize;
 }
 .chanh-nav__links-wrapper {
-  @apply py-8;
+  @apply py-5 xl:py-8;
 }
 .chanh-nav__links {
   text-decoration: none;
   @apply block py-2 px-3 rounded-2xl
   hover:bg-chanh-emphasize-400 focus:bg-chanh-emphasize-400
-  text-3xl text-center text-chanh-secondary hover:text-chanh-secondary focus:text-chanh-secondary;
+  text-2xl xl:text-3xl text-center text-chanh-secondary hover:text-chanh-secondary focus:text-chanh-secondary;
 }
 
 .avatar-and-social {
-  @apply text-center;
+  @apply text-center w-full;
+}
+.avatar-and-social--mobile {
+  @apply lg:!hidden bg-chanh-emphasize py-5 mb-5 rounded-xl;
 }
 .avatar-and-social__avatar {
-  @apply border-chanh-secondary border-8 rounded-full !w-44 xl:!w-full;
+  @apply border-chanh-secondary border-4 xl:border-8 rounded-full !w-40 xl:!w-full;
 }
 .avatar-and-social__name {
-  @apply !text-2xl text-chanh-secondary;
+  @apply !text-xl md:!text-2xl text-chanh-secondary;
 }
 .avatar-and-social__social {
   @apply flex justify-center gap-2;

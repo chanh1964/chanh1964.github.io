@@ -14,10 +14,14 @@ export function AvatarAndSocial(props: Props) {
   const [copyText, setCopyText] = useState<string>('Click to Copy');
 
   return (
-    <Space className="avatar-and-social" direction="vertical" size="middle">
+    <Space
+      className={`avatar-and-social ${props.className}`}
+      direction="vertical"
+      size="middle"
+    >
       <Image
         preview={false}
-        className={`avatar-and-social__avatar ${props.className}`}
+        className={`avatar-and-social__avatar`}
         src="/avatar.jpg"
         alt="Avatar"
       />

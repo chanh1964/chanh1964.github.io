@@ -3,7 +3,7 @@
 import { Divider, Image, Skeleton } from 'antd';
 import { useEffect, useState } from 'react';
 
-import { ChanhUpdatesTable } from './components';
+import { AvatarAndSocial, ChanhUpdatesTable } from './components';
 import DataSource from './DataSource';
 import { Update } from './types';
 
@@ -22,6 +22,7 @@ export default function Home() {
 
   return (
     <>
+      <AvatarAndSocial className="avatar-and-social--mobile" />
       <div id="about-me">
         <h1>About Me</h1>
         <Divider />
