@@ -82,6 +82,18 @@ export default function Home() {
         </span>
       </div>
 
+      <div id="contact" className="pt-10">
+        <h1>Contact</h1>
+        <Divider />
+        <h2>Address</h2>
+        <p>Mobile Multimedia Communications Laboratory</p>
+        <p>Shibaura Institute of Technology</p>
+        <p>Toyosu Campus, Main Building, 11F07</p>
+        <p>3-7-5 Toyosu, Koto, Tokyo 135-8548, Japan</p>
+        <h2 className="pt-4">Email</h2>
+        <p>tran.chanh.r4[at]shibaura-it.ac.jp</p>
+      </div>
+
       <div id="news-short" className="pt-10">
         <h1>Latest News & Updates</h1>
         <Divider />

@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-key */
 'use client';
 
-import { LinkOutlined } from '@ant-design/icons';
 import { Collapse, CollapseProps, Skeleton, Timeline } from 'antd';
 import { useEffect, useState } from 'react';
 
+import { ExternalLink } from '../components/icons';
 import DataSource from '../DataSource';
 import { Activities, ActivityEntry, ActivityInfo } from '../types';
 import { dateToString } from '../util/Util';
@@ -32,7 +32,7 @@ export default function ActivitiessPage() {
           className="chanh-link"
           href={`${window.location.origin}/updates/#${record.interal_link_id}`}
         >
-          <b>{record.title}</b> <LinkOutlined className="chanh-anticon-link" />
+          <b>{record.title}</b> <ExternalLink />
         </a>
       );
     else
@@ -68,7 +68,7 @@ export default function ActivitiessPage() {
     if (record.external_link)
       detail.push(
         <a target="_blank" className="chanh-link" href={record.external_link}>
-          {record.external_link}
+          {record.external_link} <ExternalLink />
         </a>
       );
     return <>{detail}</>;

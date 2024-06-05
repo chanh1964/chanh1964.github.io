@@ -1,9 +1,9 @@
 'use client';
 
-import { LinkOutlined } from '@ant-design/icons';
 import { Skeleton, Timeline } from 'antd';
 import { useEffect, useState } from 'react';
 
+import { ExternalLink } from '../components/icons';
 import DataSource from '../DataSource';
 import { Profile, ProfileInfo } from '../types';
 import { dateToString } from '../util/Util';
@@ -30,10 +30,11 @@ export default function ProfilePage() {
           target="_blank"
           title="Click to open external link"
         >
-          {entry.place} <LinkOutlined className="chanh-anticon-link" />
+          {entry.place} {entry.country ? `(${entry.country})` : ''}{' '}
+          <ExternalLink />
         </a>
       ) : (
-        entry.place
+        `${entry.place} ${entry.country ? `(${entry.country})` : ''}`
       );
 
       items.push({
@@ -49,7 +50,7 @@ export default function ProfilePage() {
               {entry.subtitle}
             </span>
             <span>
-              {prefixPlace} {_place} {entry.country ? `(${entry.country})` : ''}
+              {prefixPlace} {_place}
             </span>
             <span className="pt-1">{entry.description}</span>
           </div>
