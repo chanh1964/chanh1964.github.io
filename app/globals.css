@@ -169,19 +169,6 @@ a.chanh-link {
   @apply block w-full;
 }
 
-/* .activities-table__title {
-  @apply text-chanh-primary;
-} */
-.activities-table__category-wraper {
-  @apply pb-8;
-}
-.actitivies-table__detail {
-  @apply block;
-}
-.activities-table__entry-wraper {
-  @apply block;
-}
-
 .chanh-timeline__item-wrapper span {
   @apply block;
 }

@@ -1,8 +1,7 @@
 /* eslint-disable react/jsx-key */
 'use client';
 
-import { Collapse, CollapseProps, Skeleton, Table } from 'antd';
-import { ColumnsType } from 'antd/es/table';
+import { Collapse, CollapseProps, Skeleton, Timeline } from 'antd';
 import { useEffect, useState } from 'react';
 
 import DataSource from '../DataSource';
@@ -43,19 +42,19 @@ export default function ActivitiessPage() {
       );
     if (record.institution && record.role)
       detail.push(
-        <span className="actitivies-table__detail text-base">
+        <span className="actitivies-table__detail">
           affiliated with {record.institution}, as <i>{record.role}</i>
         </span>
       );
     else if (record.institution)
       detail.push(
-        <span className="actitivies-table__detail text-base">
+        <span className="actitivies-table__detail">
           affiliated with {record.institution}
         </span>
       );
     else if (record.role)
       detail.push(
-        <span className="actitivies-table__detail text-base">
+        <span className="actitivies-table__detail">
           as <i>{record.role}</i>
         </span>
       );
@@ -74,60 +73,48 @@ export default function ActivitiessPage() {
     return <>{detail}</>;
   };
 
-  const columns: ColumnsType<ActivityEntry> = [
-    {
-      width: 120,
-      align: 'left',
-      className: 'align-top',
-      render: (record: ActivityEntry) => {
-        const _to =
-          record.to == -1
-            ? null
-            : record.to == 0
-              ? ' - Present'
-              : ` - ${dateToString(record.to)}`;
-        return (
-          <span className="align-top">
-            {dateToString(record.from)} <br />
-            {_to}
-          </span>
-        );
-      },
-    },
-    {
-      align: 'left',
-      render: (record: ActivityEntry) => {
-        return (
-          <div className="activities-table__entry-wraper">
-            {generateActivityEntryDetail(record)}
+  const generateTimelineItems = (entries?: ActivityEntry[]) => {
+    if (!entries) return;
+    const items = [];
+    for (const entry of entries) {
+      const _to =
+        entry.to == -1
+          ? null
+          : entry.to == 0
+            ? ' - Present'
+            : ` - ${dateToString(entry.to)}`;
+      items.push({
+        color: '#0b7f6b',
+        children: (
+          <div className="chanh-timeline__item-wrapper">
+            <span className="chanh-timeline__date">
+              {dateToString(entry.from)}
+              {_to}
+            </span>
+            {generateActivityEntryDetail(entry)}
           </div>
-        );
-      },
-    },
-  ];
+        ),
+      });
+    }
+    items.push({ color: 'transparent' });
+    return items;
+  };
 
-  const generateTables = (categories?: ActivityInfo[]) => {
+  const generateTimelines = (categories?: ActivityInfo[]) => {
     if (!categories) return;
-    const tables = [];
+    const timelines = [];
     for (const category of categories) {
-      tables.push(
+      timelines.push(
         <div className="activities-table__category-wraper">
           <h2 className="activities-table__title">{category.type}</h2>
-          <Table
-            tableLayout="fixed"
-            className="chanh-table activities-table"
-            dataSource={category.entries}
-            columns={columns}
-            loading={isLoading}
-            pagination={{
-              pageSize: category.entries.length,
-              hideOnSinglePage: true,
-            }}
+          <Timeline
+            className="chanh-timeline"
+            items={generateTimelineItems(category.entries)}
           />
         </div>
       );
     }
-    return tables;
+    return timelines;
   };
 
   const items: CollapseProps['items'] = [
@@ -135,29 +122,22 @@ export default function ActivitiessPage() {
       key: '1',
       label: <h1>Academic Activities</h1>,
       style: { border: 'none' },
-      children: generateTables(data?.academic),
+      children: generateTimelines(data?.academic),
     },
     {
       key: '2',
       label: <h1>International Activities</h1>,
       style: { border: 'none' },
-      children: generateTables(data?.international),
+      children: generateTimelines(data?.international),
     },
     {
       key: '3',
       label: <h1>Volunteer and Community Outreach</h1>,
       style: { border: 'none' },
       children: (
-        <Table
-          tableLayout="fixed"
-          className="chanh-table activities-table"
-          dataSource={data?.volunteer}
-          columns={columns}
-          loading={isLoading}
-          pagination={{
-            pageSize: data?.volunteer.length,
-            hideOnSinglePage: true,
-          }}
+        <Timeline
+          className="chanh-timeline"
+          items={generateTimelineItems(data?.volunteer)}
         />
       ),
     },
