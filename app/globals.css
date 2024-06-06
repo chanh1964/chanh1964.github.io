@@ -160,6 +160,9 @@ a.chanh-link {
 a.chanh-link .chanh-anticon-link {
   @apply !inline !align-top !text-base;
 }
+.flipped {
+  transform: scale(-1, 1);
+}
 
 .chanh-detail-modal {
   @apply !max-w-[1080px] !w-[90%] lg:!w-full overflow-hidden;
