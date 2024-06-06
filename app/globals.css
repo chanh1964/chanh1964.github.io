@@ -96,15 +96,16 @@ scrollbar {
   @apply border-2 border-chanh-emphasize shadow-xl;
 }
 .chanh-mobile-nav .ant-dropdown-menu-item {
-  @apply bg-chanh-secondary !my-1 !mx-1
+  @apply bg-chanh-secondary !my-1 !mx-1 !transition-none
   hover:!bg-chanh-emphasize focus:!bg-chanh-emphasize
   text-center border-chanh-emphasize border-2;
 }
-.chanh-mobile-nav .ant-dropdown-menu-item:hover .chanh-mobile-nav__links {
+.chanh-mobile-nav .ant-dropdown-menu-item:hover .chanh-mobile-nav__links,
+.chanh-mobile-nav .ant-dropdown-menu-item:focus .chanh-mobile-nav__links {
   @apply !text-chanh-secondary;
 }
 .chanh-mobile-nav .chanh-mobile-nav__links {
-  @apply block w-full rounded-full py-1
+  @apply block w-full rounded-full py-1 !transition-none
   text-2xl font-sans !text-chanh-emphasize;
 }
 
