@@ -9,6 +9,7 @@ import { Lato, Lora } from 'next/font/google';
 import React, { ReactNode } from 'react';
 
 import { AvatarAndSocial, Navigation } from './components';
+import MobileNavigation from './components/MobileNavigation';
 
 const sans = Lato({
   subsets: ['latin'],
@@ -36,7 +37,7 @@ export default function RootLayout({
         <AntdRegistry>
           <Layout className="chanh-layout-wrapper">
             <Header id="chanh-header" className="chanh-nav">
-              The Header
+              <MobileNavigation />
             </Header>
             <Layout hasSider className="chanh-layout-wrapper overflow-hidden">
               <Sider id="chanh-sider" className="chanh-nav">

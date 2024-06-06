@@ -1,7 +1,5 @@
-'use client';
 import { LinkOutlined } from '@ant-design/icons';
 import { Col, Image, message, Modal, Row } from 'antd';
-import { useEffect } from 'react';
 
 import { Update } from '../types';
 import { dateToString } from '../util/Util';
@@ -12,9 +10,6 @@ type Props = {
 };
 
 const ChanhDetailModal = (props: Props) => {
-  useEffect(() => {
-    document.getElementById(window.location.href.split('#')[1])?.click();
-  });
   const generateDetail = () => {
     if (!props.data.detail) return null;
     else {

@@ -1,5 +1,12 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function Navigation() {
-  //   const router = useRouter();
+  const [currentPage, setCurrentPage] = useState<string>();
+  useEffect(() => {
+    setCurrentPage(window.location.pathname.replaceAll('/', ''));
+  }, []);
   const navLinks = [
     { href: '/', label: 'Home' },
     {
@@ -22,15 +29,19 @@ export default function Navigation() {
   function generateNavLinkElements() {
     const navLinkElements = [];
     for (const link of navLinks) {
+      const currentPageClass =
+        currentPage === link.href.replaceAll('/', '')
+          ? 'chanh-nav__links--current'
+          : '';
       navLinkElements.push(
-        <a className="chanh-nav__links" href={link.href}>
+        <a className={`chanh-nav__links ${currentPageClass}`} href={link.href}>
           {link.label}
         </a>
       );
     }
     return navLinkElements;
   }
-  return (
+  return currentPage != undefined ? (
     <div className="chanh-nav__links-wrapper">{generateNavLinkElements()}</div>
-  );
+  ) : null;
 }
