@@ -10,9 +10,8 @@ export default function ClickHere(props: Props) {
       viewBox="0 0 24 24"
       width="1em"
       height="1em"
-      className={`${props.className} inline`}
+      className={`${props.className} inline ${props.lean == 'right' ? 'flipped' : ''}`}
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      transform={props.lean == 'right' ? 'matrix(-1, 0, 0, 1, 0, 0)' : ''}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
