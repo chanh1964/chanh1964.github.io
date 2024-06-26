@@ -116,7 +116,7 @@ scrollbar {
   @apply lg:!hidden bg-chanh-emphasize py-5 mb-5 rounded-xl;
 }
 .avatar-and-social__avatar {
-  @apply border-chanh-secondary border-4 xl:border-8 rounded-full !w-40 xl:!w-full;
+  @apply border-chanh-secondary border-4 xl:border-8 rounded-full !w-40 lg:!w-[30dvh] !max-w-full;
 }
 .avatar-and-social__name {
   @apply !text-xl md:!text-2xl text-chanh-secondary;

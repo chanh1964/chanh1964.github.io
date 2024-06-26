@@ -70,7 +70,8 @@ export default function MobileNavigation() {
       overlayClassName="chanh-mobile-nav"
     >
       <a className="chanh-nav__links chanh-mobile-nav__dropdown">
-        {pageLabel[currentPage as keyof typeof pageLabel]} <DownOutlined />
+        {pageLabel[currentPage as keyof typeof pageLabel] ?? 'Post'}{' '}
+        <DownOutlined />
       </a>
     </Dropdown>
   ) : null;

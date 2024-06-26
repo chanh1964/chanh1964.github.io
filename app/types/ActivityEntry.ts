@@ -5,6 +5,6 @@ export default interface ActivityEntry {
   institution?: string;
   role?: string;
   description?: string;
-  interal_link_id?: string;
+  internal_link_id?: string;
   external_link?: string;
 }

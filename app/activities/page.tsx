@@ -24,47 +24,39 @@ export default function ActivitiessPage() {
 
   const generateActivityEntryDetail = (record: ActivityEntry) => {
     const detail = [];
-    if (record.interal_link_id)
+    if (record.internal_link_id)
       detail.push(
         <a
           title="Click to read more detail"
           target="_blank"
           className="chanh-link"
-          href={`${window.location.origin}/updates/#${record.interal_link_id}`}
+          href={`${window.location.origin}/post/#${record.internal_link_id}`}
         >
           <b>{record.title}</b> <ExternalLink />
         </a>
       );
     else
       detail.push(
-        <span className="actitivies-table__detail">
+        <span>
           <b>{record.title}</b>
         </span>
       );
     if (record.institution && record.role)
       detail.push(
-        <span className="actitivies-table__detail">
+        <span>
           affiliated with {record.institution}, as <i>{record.role}</i>
         </span>
       );
     else if (record.institution)
-      detail.push(
-        <span className="actitivies-table__detail">
-          affiliated with {record.institution}
-        </span>
-      );
+      detail.push(<span>affiliated with {record.institution}</span>);
     else if (record.role)
       detail.push(
-        <span className="actitivies-table__detail">
+        <span>
           as <i>{record.role}</i>
         </span>
       );
     if (record.description)
-      detail.push(
-        <span className="actitivies-table__detail pt-1">
-          {record.description}
-        </span>
-      );
+      detail.push(<span className=" pt-1">{record.description}</span>);
     if (record.external_link)
       detail.push(
         <a target="_blank" className="chanh-link" href={record.external_link}>
@@ -108,6 +100,11 @@ export default function ActivitiessPage() {
       timelines.push(
         <div className="activities-table__category-wraper">
           <h2 className="activities-table__title">{category.type}</h2>
+          {category.description ? (
+            <span className="activities-table__description">
+              {category.description}
+            </span>
+          ) : null}
           <Timeline
             className="chanh-timeline"
             items={generateTimelineItems(category.entries)}

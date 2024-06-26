@@ -12,10 +12,10 @@ export default function Home() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(DataSource.UPDATES_LATEST)
+    fetch(DataSource.UPDATES)
       .then((res) => res.json())
-      .then((data) => {
-        setData(data);
+      .then((data: Update[]) => {
+        setData(data.slice(0, 5));
         setLoading(false);
       });
   }, []);
@@ -63,23 +63,23 @@ export default function Home() {
           <br />
           Since 2023, I have been a{' '}
           <em className="not-italic">Postdoctoral Research Fellow</em> in the{' '}
-          <em className="not-italic">Innovative Global Program</em> at{' '}
+          <em className="not-italic">Innovative Global Program</em> at the{' '}
           <em className="not-italic">College of Engineering</em>, SIT. I belong
           to the Mobile Multimedia Communications Laboratory, where I have been
           appointed to a research project on assistive technology for visually
           impaired people.
           <br />
           <br />
-          Besides research duty, I am in charge of the{' '}
+          Besides research duties, I have been in charge of the{' '}
           <em className="not-italic">Java Programming Experiment</em> class
           (since my doctoral course) for 3rd-year undergraduate students. I
           jointly conduct research guidance for 4th-year undergraduate and
-          master&lsquo;s students in the lab. I also actively participate in the
+          master&lsquo;s students in the lab. I also actively participate in
           international collaboration events in the department.
           <br />
-          <br />I love playing with microcontrollers, microcomputers and
+          <br />I love playing with microcontrollers, microcomputers, and
           electronic devices. I have been a fan of the Arsenal F.C. since 2011.
-          I love travelling, photography, cooking, and Doraemon.
+          I love traveling, photography, cooking, and Doraemon.
         </span>
       </div>
 

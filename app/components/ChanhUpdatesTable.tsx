@@ -1,8 +1,5 @@
-'use client';
-
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
-import { useEffect } from 'react';
 
 import Update from '../types/Update';
 import { dateToString } from '../util/Util';
@@ -13,9 +10,6 @@ type Props = {
 };
 
 const ChanhUpdatesTable = (props: Props) => {
-  useEffect(() => {
-    document.getElementById(window.location.href.split('#')[1])?.click();
-  });
   const columns: ColumnsType<Update> = [
     {
       width: 120,
