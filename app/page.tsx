@@ -46,7 +46,10 @@ export default function Home() {
           <br />
           <br />I received my B.Eng. degree in Computer Science and Engineering
           from Ho Chi Minh City University of Technology (HCMUT), Vietnam in
-          2018. After that, I pursued the M.Eng. degree in Electrical
+          2018. 
+          <br />
+          <br />
+          After that, I pursued the M.Eng. degree in Electrical
           Engineering and Computer Science, and Ph.D. degree in Functional
           Control Systems at{' '}
           <em className="not-italic">Shibaura Institute of Technology</em>{' '}
@@ -54,30 +57,23 @@ export default function Home() {
           <em className="not-italic">JICA Innovative Asia</em> program (M.Eng.),
           SIT Scholarship for Foreign Graduate Students (Ph.D., 1st year), and{' '}
           <em className="not-italic">MEXT</em> Scholarship (Ph.D., 2nd & 3rd
-          year).
+          year). Then, I extended my time at SIT as a{' '}
+          <em className="not-italic">Postdoctoral Research Fellow</em> until July
+          2025.
+          <br />
+          <br />
+          Since August 2025, I have been a{' '}
+          <em className="not-italic">Project Assistant Professor</em> at the{' '}
+          <em className="not-italic">Joint Support-Center for Data Science Research</em>{' '}
+          (<em className="not-italic">ROIS-DS</em>). I belong to the Center for Social Data
+          Structuring, where I have been appointed to a research project on data privacy.
           <br />
           <br />
           My research interests are Multimedia Technology, Computer Networking,
           Internet of Things, Embedded Systems, and Accessible Computing.
           <br />
           <br />
-          Since 2023, I have been a{' '}
-          <em className="not-italic">Postdoctoral Research Fellow</em> in the{' '}
-          <em className="not-italic">Innovative Global Program</em> at the{' '}
-          <em className="not-italic">College of Engineering</em>, SIT. I belong
-          to the Mobile Multimedia Communications Laboratory, where I have been
-          appointed to a research project on assistive technology for visually
-          impaired people.
-          <br />
-          <br />
-          Besides research duties, I have been in charge of the{' '}
-          <em className="not-italic">Java Programming Experiment</em> class
-          (since my doctoral course) for 3rd-year undergraduate students. I
-          jointly conduct research guidance for 4th-year undergraduate and
-          master&lsquo;s students in the lab. I also actively participate in
-          international collaboration events in the department.
-          <br />
-          <br />I love playing with microcontrollers, microcomputers, and
+          I love playing with microcontrollers, microcomputers, and
           electronic devices. I have been a fan of the Arsenal F.C. since 2011.
           I love traveling, photography, cooking, and Doraemon.
         </span>
@@ -87,12 +83,11 @@ export default function Home() {
         <h1>Contact</h1>
         <Divider />
         <h2>Address</h2>
-        <p>Mobile Multimedia Communications Laboratory</p>
-        <p>Shibaura Institute of Technology</p>
-        <p>Toyosu Campus, Main Building, 11F07</p>
-        <p>3-7-5 Toyosu, Koto, Tokyo 135-8548, Japan</p>
+        <p>Research Organization of Information and Systems (ROIS)</p>
+        <p>Joint Support-Center for Data Science Research (ROIS-DS)</p>
+        <p>10-3 Midori-cho, Tachikawa, Tokyo 190-8562, Japan</p>
         <h2 className="pt-4">Email</h2>
-        <p>tran.chanh.r4[at]shibaura-it.ac.jp</p>
+        <p>chanh &#128073; ism &#11037; ac &#11037; jp</p>
       </div>
 
       <div id="news-short" className="pt-10">

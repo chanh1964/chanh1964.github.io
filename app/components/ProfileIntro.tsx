@@ -37,7 +37,7 @@ export function AvatarAndSocial(props: Props) {
         />
         <ChanhSocialButton
           icon={<GoogleScholar className="avatar-and-social__social__icon" />}
-          href="https://scholar.google.com/citations?user=wNwXJWkAAAAJ&hl=en"
+          href="https://scholar.google.com/citations?user=5z7byBMAAAAJ"
           tooltipText="Google Scholar"
         />
         <ChanhSocialButton
@@ -50,14 +50,14 @@ export function AvatarAndSocial(props: Props) {
           tooltipText={
             <p className="text-center">
               <span className="underline p-1">
-                tran.chanh.r4[at]shibaura-it.ac.jp
+                chanh &#128073; ism &#11037; ac &#11037; jp
               </span>
               <br />
               {copyText}
             </p>
           }
           onClick={() => {
-            navigator.clipboard.writeText('tran.chanh.r4[at]shibaura-it.ac.jp');
+            navigator.clipboard.writeText('chanh \u{1F449} ism \u{2B1D} ac \u{2B1D} jp');
             setCopyText('Copied to Clipboard');
             setTimeout(() => setCopyText('Click to Copy'), 2000);
           }}
