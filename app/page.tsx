@@ -46,34 +46,35 @@ export default function Home() {
           <br />
           <br />I received my B.Eng. degree in Computer Science and Engineering
           from Ho Chi Minh City University of Technology (HCMUT), Vietnam in
-          2018. 
+          2018.
           <br />
           <br />
-          After that, I pursued the M.Eng. degree in Electrical
-          Engineering and Computer Science, and Ph.D. degree in Functional
-          Control Systems at{' '}
+          After that, I pursued the M.Eng. degree in Electrical Engineering and
+          Computer Science, and Ph.D. degree in Functional Control Systems at{' '}
           <em className="not-italic">Shibaura Institute of Technology</em>{' '}
           (SIT), Japan from 2018 to 2023, under the sponsorship of{' '}
           <em className="not-italic">JICA Innovative Asia</em> program (M.Eng.),
           SIT Scholarship for Foreign Graduate Students (Ph.D., 1st year), and{' '}
           <em className="not-italic">MEXT</em> Scholarship (Ph.D., 2nd & 3rd
           year). Then, I extended my time at SIT as a{' '}
-          <em className="not-italic">Postdoctoral Research Fellow</em> until July
-          2025.
+          <em className="not-italic">Postdoctoral Research Fellow</em> until
+          July 2025.
           <br />
           <br />
           Since August 2025, I have been a{' '}
           <em className="not-italic">Project Assistant Professor</em> at the{' '}
-          <em className="not-italic">Joint Support-Center for Data Science Research</em>{' '}
-          (<em className="not-italic">ROIS-DS</em>). I belong to the Center for Social Data
-          Structuring, where I have been appointed to a research project on data privacy.
+          <em className="not-italic">
+            Joint Support-Center for Data Science Research
+          </em>{' '}
+          (<em className="not-italic">ROIS-DS</em>). I belong to the Center for
+          Social Data Structuring, where I have been appointed to a research
+          project on data privacy.
           <br />
           <br />
           My research interests are Multimedia Technology, Computer Networking,
           Internet of Things, Embedded Systems, and Accessible Computing.
           <br />
-          <br />
-          I love playing with microcontrollers, microcomputers, and
+          <br />I love playing with microcontrollers, microcomputers, and
           electronic devices. I have been a fan of the Arsenal F.C. since 2011.
           I love traveling, photography, cooking, and Doraemon.
         </span>

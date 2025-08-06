@@ -57,7 +57,9 @@ export function AvatarAndSocial(props: Props) {
             </p>
           }
           onClick={() => {
-            navigator.clipboard.writeText('chanh \u{1F449} ism \u{2B1D} ac \u{2B1D} jp');
+            navigator.clipboard.writeText(
+              'chanh \u{1F449} ism \u{2B1D} ac \u{2B1D} jp'
+            );
             setCopyText('Copied to Clipboard');
             setTimeout(() => setCopyText('Click to Copy'), 2000);
           }}
