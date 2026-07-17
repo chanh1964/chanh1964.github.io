@@ -62,17 +62,22 @@ export default function Home() {
           <br />
           <br />
           Since August 2025, I have been a{' '}
-          <em className="not-italic">Project Assistant Professor</em> at the{' '}
+          <em className="not-italic">Project Assistant Professor</em> at the
+          Center for Social Data Structuring,{' '}
           <em className="not-italic">
             Joint Support-Center for Data Science Research
           </em>{' '}
-          (<em className="not-italic">ROIS-DS</em>). I belong to the Center for
-          Social Data Structuring, where I have been appointed to a research
-          project on data privacy.
+          (<em className="not-italic">ROIS-DS</em>), and jointly a Specially
+          Appointed Researcher at{' '}
+          <em className="not-italic">
+            The Institute of Statistical Mathematics
+          </em>
+          . I am specifically involved in research and development works for the{' '}
+          <em className="not-italic">SDC4Society</em> project.
           <br />
           <br />
-          My research interests are Multimedia Technology, Computer Networking,
-          Internet of Things, Embedded Systems, and Accessible Computing.
+          My research interests are Privacy-Preserving Technologies, Computer
+          Networking, Embedded Systems, and Multimedia Applications.
           <br />
           <br />I love playing with microcontrollers, microcomputers, and
           electronic devices. I have been a fan of the Arsenal F.C. since 2011.
@@ -88,7 +93,10 @@ export default function Home() {
         <p>Joint Support-Center for Data Science Research (ROIS-DS)</p>
         <p>10-3 Midori-cho, Tachikawa, Tokyo 190-8562, Japan</p>
         <h2 className="pt-4">Email</h2>
-        <p>chanh &#128073; ism &#11037; ac &#11037; jp</p>
+        <p>
+          [my first name] &#128073; [domain name of the institution where I am
+          working as a Specially Appointed Researcher]
+        </p>
       </div>
 
       <div id="news-short" className="pt-10">

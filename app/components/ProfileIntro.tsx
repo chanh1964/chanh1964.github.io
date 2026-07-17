@@ -47,18 +47,10 @@ export function AvatarAndSocial(props: Props) {
         />
         <ChanhSocialButton
           icon={<Email className="avatar-and-social__social__icon" />}
-          tooltipText={
-            <p className="text-center">
-              <span className="underline p-1">
-                chanh &#128073; ism &#11037; ac &#11037; jp
-              </span>
-              <br />
-              {copyText}
-            </p>
-          }
+          tooltipText={<p className="text-center">{copyText}</p>}
           onClick={() => {
             navigator.clipboard.writeText(
-              'chanh \u{1F449} ism \u{2B1D} ac \u{2B1D} jp'
+              '[my first name]\u{1F449}[domain name of the institution where I am working as a Specially Appointed Researcher]'
             );
             setCopyText('Copied to Clipboard');
             setTimeout(() => setCopyText('Click to Copy'), 2000);

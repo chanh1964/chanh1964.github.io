@@ -106,7 +106,7 @@ export default function PublicationsPage() {
     <Skeleton active />
   ) : (
     <>
-      <Collapse bordered={false} defaultActiveKey={['1']} items={items} />
+      <Collapse bordered={false} items={items} />
     </>
   );
 }
