@@ -45,13 +45,30 @@ export default function Home() {
           />
           <br />
           <br />I received my B.Eng. degree in Computer Science and Engineering
-          from Ho Chi Minh City University of Technology (HCMUT), Vietnam in
-          2018.
+          from{' '}
+          <em className="not-italic">
+            <a
+              href="https://hcmut.edu.vn/en"
+              className="chanh-link"
+              target="_blank"
+            >
+              Ho Chi Minh City University of Technology
+            </a>
+          </em>{' '}
+          (HCMUT), Vietnam in 2018.
           <br />
           <br />
           After that, I pursued the M.Eng. degree in Electrical Engineering and
-          Computer Science, and Ph.D. degree in Functional Control Systems at{' '}
-          <em className="not-italic">Shibaura Institute of Technology</em>{' '}
+          Computer Science, and Ph.D. degree in Engineering at{' '}
+          <em className="not-italic">
+            <a
+              href="https://www.shibaura-it.ac.jp/en/"
+              className="chanh-link"
+              target="_blank"
+            >
+              Shibaura Institute of Technology
+            </a>
+          </em>{' '}
           (SIT), Japan from 2018 to 2023, under the sponsorship of{' '}
           <em className="not-italic">JICA Innovative Asia</em> program (M.Eng.),
           SIT Scholarship for Foreign Graduate Students (Ph.D., 1st year), and{' '}
@@ -65,15 +82,35 @@ export default function Home() {
           <em className="not-italic">Project Assistant Professor</em> at the
           Center for Social Data Structuring,{' '}
           <em className="not-italic">
-            Joint Support-Center for Data Science Research
+            <a
+              href="https://fs.rois.ac.jp/en/"
+              className="chanh-link"
+              target="_blank"
+            >
+              Co-creation Center for Future Science Systems
+            </a>
           </em>{' '}
-          (<em className="not-italic">ROIS-DS</em>), and jointly a Specially
-          Appointed Researcher at{' '}
+          , and jointly a Specially Appointed Researcher at{' '}
           <em className="not-italic">
-            The Institute of Statistical Mathematics
+            <a
+              href="https://www.ism.ac.jp/index_e.html"
+              className="chanh-link"
+              target="_blank"
+            >
+              The Institute of Statistical Mathematics
+            </a>
           </em>
-          . I am specifically involved in research and development works for the{' '}
-          <em className="not-italic">SDC4Society</em> project.
+          . I am specifically involved in research and development work for the{' '}
+          <em className="not-italic">
+            <a
+              href="https://www.sdc4society.org/"
+              className="chanh-link"
+              target="_blank"
+            >
+              SDC4Society
+            </a>
+          </em>{' '}
+          project.
           <br />
           <br />
           My research interests are Privacy-Preserving Technologies, Computer
@@ -90,7 +127,7 @@ export default function Home() {
         <Divider />
         <h2>Address</h2>
         <p>Research Organization of Information and Systems (ROIS)</p>
-        <p>Joint Support-Center for Data Science Research (ROIS-DS)</p>
+        <p>Co-creation Center for Future Science Systems</p>
         <p>10-3 Midori-cho, Tachikawa, Tokyo 190-8562, Japan</p>
         <h2 className="pt-4">Email</h2>
         <p>
